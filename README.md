@@ -117,6 +117,12 @@ ros2 run autonomous_tb3 maze_solver.py
 - **RViz2 窗口**：可以看到机器人的路径规划和实时位置
 - **终端输出**：显示估计到达时间和导航状态
 
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="Thumbnail.png">
+    <source src="Gazebo_Sim_Recording.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## 项目结构
 
 ```
