@@ -1,0 +1,38 @@
+# ROS2 build files
+build/
+install/
+log/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gazebo simulation files
+*.sdf.bak
+*.world.bak
+
+# ROS2 bag files
+*.bag
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+
+# Colcon files
+COLCON_IGNORE
+.colcon/

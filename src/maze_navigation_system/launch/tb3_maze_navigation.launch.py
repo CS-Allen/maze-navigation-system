@@ -33,10 +33,10 @@ from launch.actions import SetEnvironmentVariable
 def generate_launch_description():
     launch_file_dir = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
-    maze_path = os.path.join(get_package_share_directory('autonomous_tb3'), 'worlds', 'tb3_maze_world', 'model.sdf')
-    maze_map_config_file_path = os.path.join(get_package_share_directory('autonomous_tb3'), 'config', 'maze_map.yaml')
-    params_config_file_path = os.path.join(get_package_share_directory('autonomous_tb3'), 'config', 'tb3_nav_params.yaml')
-    rviz_config_file_path = os.path.join(get_package_share_directory('autonomous_tb3'), 'config', 'tb3_nav.rviz')
+    maze_path = os.path.join(get_package_share_directory('maze_navigation_system'), 'worlds', 'tb3_maze_world', 'model.sdf')
+    maze_map_config_file_path = os.path.join(get_package_share_directory('maze_navigation_system'), 'config', 'maze_map.yaml')
+    params_config_file_path = os.path.join(get_package_share_directory('maze_navigation_system'), 'config', 'tb3_nav_params.yaml')
+    rviz_config_file_path = os.path.join(get_package_share_directory('maze_navigation_system'), 'config', 'tb3_nav.rviz')
     
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     x_pose = LaunchConfiguration('x_pose', default='-3.947650')    # x-coordinate for spawning the turtlebot3 robot inside the gazebo classic simulation environment.
@@ -100,7 +100,7 @@ def generate_launch_description():
     
     # Spawning maze world
     maze_spawner = Node(
-        package = 'autonomous_tb3',
+        package = 'maze_navigation_system',
         executable = 'entity_spawner.py',
         name = "maze_spawner",
         arguments = [maze_path, 'tb3_maze_world', '0.0', '0.0']
