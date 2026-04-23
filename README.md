@@ -75,15 +75,15 @@ cd ~/ros2_ws
 
 ```bash
 cd src
-git clone https://github.com/Preetamk97/Autonomous-Maze-Solving-Turtlebot3-Simulation.git
-mv Autonomous-Maze-Solving-Turtlebot3-Simulation autonomous_tb3
+git clone https://github.com/CS-Allen/maze-navigation-system.git
+mv maze-navigation-system maze_navigation_system
 ```
 
 ### 3. 构建项目
 
 ```bash
 cd ~/ros2_ws
-colcon build --packages-select autonomous_tb3
+colcon build --packages-select maze_navigation_system
 ```
 
 ### 4. 启动仿真环境
@@ -93,7 +93,7 @@ colcon build --packages-select autonomous_tb3
 ```bash
 cd ~/ros2_ws
 source install/setup.bash
-ros2 launch autonomous_tb3 tb3_maze_navigation.launch.py
+ros2 launch maze_navigation_system tb3_maze_navigation.launch.py
 ```
 
 这将启动：
@@ -108,7 +108,7 @@ ros2 launch autonomous_tb3 tb3_maze_navigation.launch.py
 ```bash
 cd ~/ros2_ws
 source install/setup.bash
-ros2 run autonomous_tb3 maze_solver.py
+ros2 run maze_navigation_system maze_solver.py
 ```
 
 ### 6. 观察导航过程
@@ -120,9 +120,9 @@ ros2 run autonomous_tb3 maze_solver.py
 ## 项目结构
 
 ```
-autonomous_tb3/
+maze_navigation_system/
 ├── src/
-│   └── autonomous_tb3/
+│   └── maze_navigation_system/
 │       ├── config/             # 配置文件
 │       │   ├── maze_map.yaml   # 迷宫地图配置
 │       │   └── tb3_nav_params.yaml  # 导航参数配置
